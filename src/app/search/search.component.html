@@ -1,0 +1,45 @@
+<div class="searchBox">
+    <div class="searchBox__step1">
+      <div class="searchBox__service">
+        <label class="searchBox__label" for="servicies">Senior Care Service</label>
+        <select [(ngModel)]="selectedServiceTypeId"
+          (ngModelChange)="typeChange($event)"
+          class="form-control input-lg minimal" id="servicies">
+          <option value="0" disabled="disabled">Please choose a service type</option>
+          <option *ngFor="let serviceType of serviceTypes" value="{{ serviceType.id }}">{{serviceType.label}}</option>
+        </select>
+      </div>
+    </div>
+    <p>Selected: {{ selectedServiceTypeId }}</p>
+    <!-- <div>
+        <label class="searchBox__label" for="city">City</label>
+        <select
+          (ngModelChange)="setSearchType('city')"
+          [(ngModel)]="selectedCity" 
+          class="form-control input-lg minimal" 
+          id="city"
+          [disabled]="selectedService === '0' || loadingCities">
+          <option value="0" disabled="disabled">Select a Service to see the options</option>
+          <option value="">All Colorado cities</option>
+          <option *ngFor="let city of cities | async" value="{{ city }}">{{ city }}</option>
+        </select>
+      </div>
+      <div class="searchBox__searchContainer">
+        <div class="searchBox__button" [ngClass]="{ searchBox__button_disabled: disableSearchButton }">
+          <button 
+            (click)="doSearch()"
+            [disabled]="disableSearchButton">
+            <span
+              class="spinner-border spinner-border-sm"
+              role="status"
+              aria-hidden="true"
+              *ngIf="loadingCities || isSearching">
+            </span>
+            Search
+          </button>
+        </div>
+        <div class="clear_filters">
+          <button (click)="resetAllFilters()">Clear Search</button>
+        </div>
+      </div> -->
+  </div>

@@ -1,0 +1,108 @@
+$blue: #0c59a1;
+//Reset select
+select {
+
+  /* styling */
+  background-color: white;
+  border: thin solid blue;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+
+  /* reset */
+
+  margin: 0;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+// SELECT arrow
+select.minimal {
+  background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+select.minimal:focus {
+  background-image:
+    linear-gradient(45deg, green 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, green 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+  border-color: green;
+  outline: 0;
+}
+
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+
+// Responsive Popover
+::ng-deep .popover {
+  @media only screen and (max-width: 991px) {
+    max-width: 12em !important;
+    .tooltip-inner {
+      min-width: 12em !important;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    left: 1em;
+    min-width: 25em;
+  }
+  &.show {
+    opacity: 1!important;
+  }
+  .tooltip-inner {
+    min-width: 25em;
+    background-color: white;
+    color: black;
+    max-width: 15em;
+    text-align: left;
+  }
+}
+
+::ng-deep .responsive-popover {
+  .info-icon {
+    font-size: 16px;
+    padding-left: 0.5rem;
+    color: $blue;
+  }
+}
+
+// Content wrapper matching the website
+.container-fluid.entry-wrap{
+  padding: 60px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0.15em 0.35em 0 rgba(0,0,0,0.135);
+  
+
+  @media (max-width: 480px){
+        padding: 25px;
+    }
+}

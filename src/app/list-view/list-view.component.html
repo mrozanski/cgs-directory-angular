@@ -1,0 +1,9 @@
+<div class="row vendor-list">
+    <div class="col-md-12 space search-description">
+        <h1>Colorado Online Resource Directory for Older Adults and Families</h1>
+    </div>
+</div>
+  
+  <app-search [selectedServiceTypeId]="selectedServiceTypeId" (selected)="onSelected($event)"></app-search>
+<p>{{ selectedServiceTypeId }}</p>
+  
