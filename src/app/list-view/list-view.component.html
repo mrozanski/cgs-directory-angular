@@ -4,6 +4,11 @@
     </div>
 </div>
   
-  <app-search [selectedServiceTypeId]="selectedServiceTypeId" (selected)="onSelected($event)"></app-search>
+  <app-search
+    [selectedServiceTypeId]="selectedServiceTypeId"
+    [selectedCity]="selectedCity"
+    [searchOptions]="searchOptions"
+    (onSearch)="onSearch($event)"
+  ></app-search>
 <p>{{ selectedServiceTypeId }}</p>
   
